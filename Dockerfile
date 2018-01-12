@@ -3,7 +3,7 @@ FROM h2g2/docker-xenial
 ENV KONG_VERSION 0.11.2
 
 RUN apt-get update && \
-	apt-get install -y wget perl
+	apt-get install -y wget perl curl
 
 RUN wget https://bintray.com/kong/kong-community-edition-deb/download_file?file_path=dists/kong-community-edition-$KONG_VERSION.zesty.all.deb -O kong-community-edition-$KONG_VERSION.zesty.all.deb &&\
 	dpkg -i kong-community-edition-$KONG_VERSION.zesty.all.deb
